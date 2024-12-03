@@ -52,10 +52,12 @@
                     <label><input type="checkbox" id="c" name="q1_c">Svájc</label><br>
                     <label><input type="checkbox" id="d" name="q1_d">Törökország</label><br>
                     <label><input type="checkbox" id="e" name="q1_e">Hollandia</label><br>
+                    <div class="megoldas" id="m1"></div>
                 </td>
                 <td>
                     <label>6. kérdés: Mióta tartja semlegességét Svájc? <br><br>
                     <input type="text" id="svajc" placeholder="pl. 2024" maxlength="4" name="q6"></label>
+                    <div class="megoldas" id="m6"></div>
                 </td>
             </tr>
             <tr>
@@ -63,6 +65,7 @@
                     2. kérdés: Igaz vagy Hamis? Új-Zélandon több juh található, mint ember.<br>
                     <label><input type="radio" id="igaz" name="q2" value="i">Igaz</label><br>
                     <label><input type="radio" id="hamis" name="q2" value="h">Hamis</label><br>
+                    <div class="megoldas" id="m2"></div>
                 </td>
                 <td>
                     <label>7. kérdés: Mit tart Bhután prioritásként? <br><br>
@@ -74,23 +77,27 @@
                             <option value="gazdaság">
                             <option value="háború">
                         </datalist></label>
+                    <div class="megoldas" id="m7"></div>
                 </td> 
             </tr>
             <tr>
                 <td>
                     <label>3. kérdés: Hány hivatalos nyelvet ismer el India?<br>
                     <input type="number" id="india" name="q3" min="10" max="30" step="1" value="10"></label>
+                    <div class="megoldas" id="m3"></div>
                 </td>
                 <td>
                    <label>8. kérdés: Hány nemzeti park található az USA-ban?
                     <input type="range" id="usa" name="q8" min="50" max="70" step="1">
                     <span id="rangeValue">60</span></label><br>
+                    <div class="megoldas" id="m8"></div>
                 </td>
             </tr>
             <tr>
                 <td>
                     <label>4. kérdés: Hogy hívják Nigériában a híres filmgyártó ipart? <br>
                     <input type="text" id="nigeria" name="q4" placeholder="pl. Hollywood"></label>
+                    <div class="megoldas" id="m4"></div>
                 </td>
                 <td>
                     <label>9. kérdés: Melyik országban a legnagyobb az automaták sűrűsége? <br>
@@ -101,6 +108,7 @@
                         <option value="usa">USA</option>
                         <option value="magyarorszag">Magyarország</option>
                     </select></label>
+                    <div class="megoldas" id="m9"></div>
                 </td>
             </tr>
             <tr>
@@ -110,6 +118,7 @@
                     <label><input type="radio" id="g" name="q5" value="olaszország">Olaszország</label><br>
                     <label><input type="radio" id="h" name="q5" value="aregntína">Argentína</label><br>
                     <label><input type="radio" id="i" name="q5" value="franciaország">Franciaország</label><br>
+                    <div class="megoldas" id="m5"></div>
                 </td>
                 <td>
                     10. kérdés: Hol volt jelen a közelmúltban a kannibalizmus?<br>
@@ -117,11 +126,12 @@
                     <label><input type="radio" id="k" name="q10" value="vietnám">Vietnám</label><br>     
                     <label><input type="radio" id="l" name="q10" value="egyiptom">Egyptom</label><br>
                     <label><input type="radio" id="m" name="q10" value="pápua">Pápua Új-Guinea</label><br>
+                    <div class="megoldas" id="m10"></div>
                 </td>
             </tr>
             <tr>
                 <td id="gomb" colspan="2">
-                    <button type="submit" id="kuld">Elküldés</button>
+                    <button type="submit" id="kuld">Eredmény</button>
                 </td>
             </tr>
         </table>
