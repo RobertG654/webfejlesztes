@@ -54,8 +54,8 @@ document.getElementById("kuld").addEventListener("click", pont)
         }
 
         //negyedik kérdés
-        const h = document.getElementById("nigeria").value
-        if(h == "Nollywood"){
+        const h = document.getElementById("nigeria").value.toLowerCase()
+        if(h== "nollywood"){
             pontszam++
             m4.textContent = "Helyes!"
             m4.className = "megoldas helyes"
@@ -151,7 +151,8 @@ document.getElementById("kuld").addEventListener("click", pont)
         else{
             alert("Gratulálok, egy zseni vagy!")
         }
-
+        
+        pontszam = 0
     }
 
 //csaló gomb

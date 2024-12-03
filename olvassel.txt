@@ -8,7 +8,7 @@ Mindegyik kontinensnek van egy saját oldala, a főoldal mellett egy kvíz oldal
 
 JavaScript:
 Két JavaScript kódom van, az egyik a főoldalon, a másik pedig a kvíz oldalon. 
-A főoldalonlévő script.js kód arra szolgál, hogy ha a felhasználó rákattint a gombra, akkor automatikusan legörget az oldal a navigációhoz. A kódnak nincsen gyakorlati jelentősége, csak esztétikai okokból raktam bele. Ebben a kódban a saját tudásom mellett AI segítségét is használtam.
+A főoldalonlévő script.js kód arra szolgál, hogy ha a felhasználó rákattint a gombra, akkor automatikusan legörget az oldal a navigációhoz. A kódnak nincsen gyakorlati jelentősége, csak esztétikai okokból raktam bele.
 A kvíz oldalon szereplő kviz.js kód több részből áll. Először is a range űrlapelemnek egy számlálót jelenít meg. Emellett még a kvízhez egy pontszámító kód is szerepel, amely kiszámítja és kiírja a helyes válaszok számát. Ha a felhasználó eltalálta a választ, akkor zölddel gratulál neki a program, ha pedig rossz a válasz, akkor pedig pirossal kiírja a jó megoldást. A pontszám alapján különböző üzenet is megjelenik. Végül egy "csaló" gomb is található, amelynek az a funkciója, hogy ha a felhasználó nem tudja esetleg a kérdést és meg szeretné tudni a választ, akkor egy pontért cserébe megtudhatja a kérdéshez a helyes választ. 
 
 Fonttípus: 
