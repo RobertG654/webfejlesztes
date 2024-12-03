@@ -44,7 +44,7 @@ header h1{
     text-align: center; 
     font-size: 1.25em; 
     flex: 1 1 100%;
-    margin: 0px;
+    margin: 10px;
     padding: 20px; 
     background-color: #f9f9f9;
     border-radius: 10px;
@@ -200,8 +200,24 @@ footer {
     transform: scale(1.1);
 }
 
-#gombok{
+#gomb{
     text-align: center;
+}
+
+#kuld{
+    padding: 10px 20px; 
+    font-size: 1em; 
+    color: white; 
+    background-color: #006ac0;
+    border: none; 
+    font-family: 'Space Mono', monospace;
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#kuld:hover {
+    background-color: #0056b3; /* Darker blue on hover */
 }
 
 #funfact {
@@ -216,6 +232,7 @@ footer {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-family: 'Space Mono', monospace;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
@@ -252,13 +269,11 @@ table h2 {
     font-size: 1.25em;
 }
 
-
 input[type="submit"],
 input[type="reset"] {
-    display: inline-block;
     text-align: center;
     padding: 10px 20px;
-    margin: 20px 10px;
+    margin: 10px;
     font-size: 1em;
     font-family: 'Space Mono', monospace;
     color: #fff;
@@ -266,7 +281,7 @@ input[type="reset"] {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 input[type="submit"]:hover,
@@ -274,9 +289,8 @@ input[type="reset"]:hover {
     background-color: #01579b;
 }
 
-input[type="submit"]:active,
-input[type="reset"]:active {
-    transform: scale(0.98);
+#urlap{
+    width: 70%;
 }
 
 /* Országok */

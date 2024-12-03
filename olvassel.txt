@@ -1,6 +1,6 @@
 Készítette: Griffiths Robert Jonathan
 
-URL: 
+URL: https://robertg654.github.io/webfejlesztes/
 
 Leírás: 
 Az oldalam egy kontinensek közötti "utazásról" szól, ahol érdekes információkat lehet olvasni országokról.

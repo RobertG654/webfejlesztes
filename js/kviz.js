@@ -4,45 +4,11 @@ function mutato(){
     document.getElementById('rangeValue').textContent = this.value;
     };
 
-//csaló gomb
-document.getElementById('funfact').addEventListener('click', segitseg)
-function segitseg(){
-    const csalas = confirm("Biztos, hogy csalni szeretnél?")
-    if (csalas == false){
-        alert("Büszke vagyok rád!")
-        return 
-    }
-
-    const kerdes_szam = prompt("Melyik kérdéshez szeretnél segtséget? (1-10)")
-
-    const valaszok = {    
-            1: "Olaszország, Svájc",
-            2: "Új-Zélandon több juh található, mint ember.",
-            3: "India 22 hivatalos nyelvet ismer el.",
-            4: "Nigériában a híres filmgyártó ipart Nollywoodnak hívják.",
-            5: "Olaszországban található a legtöbb UNESCO világörökségi helyszín.",
-            6: "Svájc régóta fenntartja semlegességét, 1815 óta nem vett részt háborúban.",
-            7: "Bhután prioritása a boldogság.",
-            8: "Az USA-ban 63 nemzeti park található.",
-            9: "Japánban a legnagyobb az automaták sűrűsége.",
-            10: "A közelmúltig a kannibalizmus elterjedt volt Pápua Új-Guineában."
-        }
-    if (kerdes_szam in valaszok){
-        alert(`Segítség a(z) ${kerdes_szam}. kérdéshez: ${valaszok[kerdes_szam]}`)
-        pontszam--
-        alert(`-1 pont`)   
-    }
-    else {
-        alert("Nem megfelelő számot írtál be!")
-    }
-
+let pontszam = 0
 
 //pont kalkulátor
 document.getElementById("kuld").addEventListener("click", pont)
-    function pont(event){
-        event.preventDefault()
-        
-        let pontszam = 0
+    function pont(){
 
         //első kérdés
         const a = document.getElementById("a").checked
@@ -112,7 +78,38 @@ document.getElementById("kuld").addEventListener("click", pont)
         }
 
         alert(`A kvízben elért pontszámod: ${pontszam}/10`);
+
+        }
+
+//csaló gomb
+document.getElementById('funfact').addEventListener('click', segitseg)
+function segitseg(){
+    const csalas = confirm("Biztos, hogy csalni szeretnél?")
+    if (csalas == false){
+        alert("Büszke vagyok rád!")
+        return 
     }
 
-}
+    const kerdes_szam = prompt("Melyik kérdéshez szeretnél segtséget? (1-10)")
 
+    const valaszok = {    
+            1: "Olaszország, Svájc",
+            2: "Új-Zélandon több juh található, mint ember.",
+            3: "India 22 hivatalos nyelvet ismer el.",
+            4: "Nigériában a híres filmgyártó ipart Nollywoodnak hívják.",
+            5: "Olaszországban található a legtöbb UNESCO világörökségi helyszín.",
+            6: "Svájc régóta fenntartja semlegességét, 1815 óta nem vett részt háborúban.",
+            7: "Bhután prioritása a boldogság.",
+            8: "Az USA-ban 63 nemzeti park található.",
+            9: "Japánban a legnagyobb az automaták sűrűsége.",
+            10: "A közelmúltig a kannibalizmus elterjedt volt Pápua Új-Guineában."
+        }
+    if (kerdes_szam in valaszok){
+        alert(`Segítség a(z) ${kerdes_szam}. kérdéshez: ${valaszok[kerdes_szam]}`)
+        pontszam--
+        alert(`-1 pont`)   
+    }
+    else {
+        alert("Nem megfelelő számot írtál be!")
+    }
+}
