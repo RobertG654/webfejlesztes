@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fun fact weboldal, ahol érdekességet lehet olvasni országokról minden kontinenseről.">
+    <meta name="author" content="Griffiths Robert Jonathan">
+    <meta name="copyright" content="Griffiths Robert Jonathan">
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="kepek/favicon/favicon.ico">
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="jquery-validation-1.19.5/dist/jquery.validate.js"></script>
+    <script>
+    $(document).ready(function () {
+        $("#kviz").validate({
+            rules: {
+                q1_a: "required",
+                q2: "required",
+                q3: {
+                    required: true,
+                    min: 10,
+                    max: 30
+                },
+                q4: "required",
+                q5: "required",
+                q6: {
+                    required: true,
+                    digit: true,
+                    minlength: 4
+                },
+                q7: "required",
+                q8: "required",
+                q9: "required",
+                q10: "required"
+            },
+            messages: {
+                q1_a: "Válassz legalább egy országot!",
+                q2: "Válassz egyet a lehetőségek közül!",
+                q3: {
+                    required: "Adj meg egy számot!",
+                    min: "Adj meg egy 10-nél nagyobb számot!",
+                    max: "Adj meg egy 30-nál kisebb számot!",
+                },
+                q4: "Írd be a válaszodat!",
+                q5: "Válassz egy országot!",
+                q6: {
+                    required: "Írj be egy évszámot!",
+                    digit: "Számot adj meg!",
+                    minlength: "4 számjegyű évszámot adj meg!"
+                },
+                q7: "Válassz egyet a lehetőségek közül!",
+                q8: "Válassz egy értéket 50 és 70 között!",
+                q9: "Válassz egy országot!",
+                q10: "Válassz egy országot!"
+            },
+            errorPlacement: function (error, element) {
+                if (element.is(":checkbox") || element.is(":radio")) {
+                    error.appendTo(element.closest("td"));
+                } else {
+                    error.insertAfter(element);
+                }
+            },
+        });
+    });
+    </script>
+    <style>
+    label.error {
+        color: red;
+        font-size: 0.9em;
+        font-weight: bold;
+        margin-top: 10px;
+        display: block;
+    }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <title>Kvíz</title>
+</head>
+
+<body>
+    <div>
+        <header>
+            <h1>Üdvözöllek a kvíz oldalon!</h1> <br>
+        </header>
+
+        <div id="felho1"></div>
+        <div id="felho2"></div>
+        <div id="felho3"></div>
+        <div id="nap"></div>
+
+        <form action="https://rf.uni-corvinus.hu/webfejlesztes/receive.php" method="post" id="kviz" novalidate>
+            <table>
+                <tr>
+                    <td colspan="2">
+                        <h2>Ebben a kvízben felmérheted az utazásod alatt szerzett tudásodat! <br>
+                            Ha csalni szeretnél, akkor a "Segítség" gomb lesz a barátod. Akárhányszor segítséget használsz, annyiszor 1 ponttal csökken a pontszámod! <br>                          
+                            Sok szerencsét! <br>
+                        </h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        1. kérdés: Mely országok szerepeltek az európai oldalon?<br>
+                        <label><input type="checkbox" id="a" name="q1_a">Olaszország</label><br>
+                        <label><input type="checkbox" id="b" name="q1_b">Franciaország</label><br>     
+                        <label><input type="checkbox" id="c" name="q1_c">Svájc</label><br>
+                        <label><input type="checkbox" id="d" name="q1_d">Törökország</label><br>
+                        <label><input type="checkbox" id="e" name="q1_e">Hollandia</label><br>
+                    </td>
+                    <td>
+                        <label>6. kérdés: Mióta tartja semlegességét Svájc? <br><br>
+                        <input type="text" id="svajc" placeholder="pl. 2024" maxlength="4" name="q6"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        2. kérdés: Igaz vagy Hamis? Új-Zélandon több juh található, mint ember.<br>
+
+                        <label><input type="radio" id="igaz" name="q2" value="i">Igaz</label><br>
+                        <label><input type="radio" id="hamis" name="q2" value="h">Hamis</label><br></td>
+
+                    <td>
+                        <label>7. kérdés: Mit tart Bhután prioritásként? <br><br>
+                        <input type="text" id="bhutan" list="valaszok" name="q7">
+                        <datalist id="valaszok">
+                            <option value="oktatás">
+                            <option value="boldogság">
+                            <option value="fenntarthatóság">
+                            <option value="gazdaság">
+                            <option value="háború">
+                        </datalist></label>
+
+                    </td> 
+                </tr>
+                <tr>
+                    <td>
+                        <label>3. kérdés: Hány hivatalos nyelvet ismer el Inida?<br>
+                        <input type="number" id="india" name="q3" min="10" max="30" step="1" value="10"></label>
+
+                    </td>
+                    <td>
+                        <label>8. kérdés: Hány nemzeti park található az USA-ban?
+                        <input type="range" id="usa" name="q8" min="50" max="70" step="1">
+                        <span id="rangeValue">60</span></label><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>4. kérdés: Hogy hívják Nigériában a híres filmgyártó ipart? <br>
+                        <input type="text" id="nigeria" name="q4" placeholder="pl. Hollywood"></label>
+
+                    </td>
+                    <td>
+                        <label>9. kérdés: Melyik országban a legnagyobb az automaták sűrűsége? <br>
+                        <select name="q9" id="japan" size="5">
+                            <option value="kina">Kína</option>
+                            <option value="indonesia">Indonézia</option>
+                            <option value="japan">Japán</option>
+                            <option value="usa">USA</option>
+                            <option value="magyarorszag">Magyarország</option>
+                        </select></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        5. kérdés: Melyik országben található a legtöbb UNESCO világörökségi helyszín?<br>
+                        <label><input type="radio" id="f" name="q5" value="thaiföld">Thaiföld</label><br>
+                        <label><input type="radio" id="g" name="q5" value="olaszország">Olaszország</label><br>
+                        <label><input type="radio" id="h" name="q5" value="aregntína">Argentína</label><br>
+                        <label><input type="radio" id="i" name="q5" value="franciaország">Franciaország</label><br>
+                    </td>
+                    <td>
+                        10. kérdés: Hol volt jelen a közelmúltban a kannibalizmus?<br>
+                        <label><input type="radio" id="j" name="q10" value="ecuador">Ecuador</label><br>
+                        <label><input type="radio" id="k" name="q10" value="vietnám">Vietnám</label><br>     
+                        <label><input type="radio" id="l" name="q10" value="egyiptom">Egyptom</label><br>
+                        <label><input type="radio" id="m" name="q10" value="pápua">Pápua Új-Guinea</label><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="gombok" colspan="2">
+                        <input type="submit" id="kuld" value="Elküldés">
+                        <input type="reset" value="Visszaállítás">
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+        <button id="funfact">Segítség</button>
+
+    </div>
+    <footer>
+        <div id="fold"></div>
+        <a id="vissza" href="index.html">Vissza a főoldalra!</a>
+    </footer>
+
+    <script src="js/kviz.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fun fact weboldal, ahol érdekességet lehet olvasni országokról minden kontinenseről.">
+    <meta name="author" content="Griffiths Robert Jonathan">
+    <meta name="copyright" content="Griffiths Robert Jonathan">
+    <link rel="icon" type="image/x-icon" href="kepek/favicon/favicon.ico">
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <title>Fun Facts</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Föld körüli utazás</h1>
+        </header>
+
+        <div id="felho1"></div>
+        <div id="felho2"></div>
+        <div id="felho3"></div>
+        <div id="nap"></div>
+
+        <div class="leiras">
+            Szia! Ezen az oldalon pár érdekes információt tudhatsz meg különböző országokról az egész világból. Miután meglátogattuk az összes kontinenst, és úgy érzed, hogy mindent tudsz, akkor lent egy quiz fog majd várni téged, hogy tesztelhesd a tudásodat! <br><br>
+            Ha készen állsz, akkor kattints az "Indtás" gombra!
+        </div>
+
+        <button id="start">Indítás</button>
+
+        <nav>
+            <h3 class="leiras">Válassz ki egy szimpatikus kontinenst!</h3><br>
+            <ul>
+                <li onclick="location.href='europa.html'"> 
+                    <img src="kepek/kontinensek/europa.png" alt="Európa">
+                    <h3>Európa</h3>
+                </li>
+                <li onclick="location.href='azsia.html'"> 
+                    <img src="kepek/kontinensek/azsia.png" alt="Ázsia">
+                    <h3>Ázsia</h3>
+                </li>
+                <li onclick="location.href='afrika.html'"> 
+                    <img src="kepek/kontinensek/afrika.png" alt="Afrika">
+                    <h3>Afrika</h3>
+                </li>
+                <li onclick="location.href='amerika.html'"> 
+                    <img src="kepek/kontinensek/amerika.png" alt="Amerika">
+                    <h3>Amerika</h3>
+                </li>
+                <li onclick="location.href='oceania.html'"> 
+                    <img src="kepek/kontinensek/oceania.png" alt="Óceánia">
+                    <h3>Óceánia</h3>
+                </li>
+                <li onclick="location.href='antarktisz.html'"> 
+                    <img src="kepek/kontinensek/antarktisz.png" alt="Antarktisz">
+                    <h3>Antarktisz</h3>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <footer>
+        <div id="fold"></div>
+        <button id="quiz" onclick="location.href='quiz.html'">Kvíz indítása</button>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</html>

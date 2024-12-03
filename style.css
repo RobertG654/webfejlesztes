@@ -1,0 +1,488 @@
+/* Általános */
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: "Space Mono", monospace;
+    background: skyblue;
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container>* {
+    height: fit-content;
+    margin: 1%;
+}
+
+/* Fejléc */
+header{
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+header h1{
+    margin: 0;
+}
+
+.leiras {
+    text-align: center; 
+    font-size: 1.25em; 
+    flex: 1 1 100%;
+    margin: 0px;
+    padding: 20px; 
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    line-height: 1.6; 
+}
+
+/* Plusz elemek */
+#felho1, #felho2, #felho3 {
+    position: absolute;
+    background: #ffffff;
+    border-radius: 50%;
+    width: 100px;
+    height: 60px;
+    box-shadow: 40px 20px 0px 0px #ffffff, -40px 20px 0px 0px #ffffff;
+    z-index: -2;
+}
+
+#felho1{
+    top: 10%; 
+    left: 10%;
+}
+
+#felho2{
+    top: 3%; 
+    left: 45%;
+}
+
+#felho3{
+    top: 8%;
+    left: 70%;
+}
+
+#nap {
+    position: absolute;
+    top: 2.5%;
+    right: 5%;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, #FFD700 50%, #FFA500 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 20px #FFD700, 0 0 40px #FFA500;
+    z-index: -1;
+}
+
+/* Indítás */
+#start{
+    padding: 15px 30px;
+    margin: 20px auto 400px auto;
+    color: #fff;
+    background-color: #006ac0;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    max-width: 40%;
+    font-size: 1.2em;
+}
+
+
+#start:hover {
+    background-color: #01579b;
+    transform: scale(1.1);
+}
+
+
+/*Menü*/
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    margin: auto;
+}
+
+nav ul li img {
+    max-width: 200px;
+    height: auto;
+    object-fit: cover;
+}
+
+nav h3 {
+    font-size: 1.2em;
+    margin: 10px;
+}
+
+nav li{
+    flex: 1 1 100%;
+    text-align: center;
+    margin: 20px 30px;
+    padding: 10px;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #70eaff; /* Világos háttérszín */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+nav li:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+nav #current {
+    background-color: #0288d1;  /* Sötétebb szín */
+    color: white;
+    transform: scale(1.05);  /* Enyhén nagyobb a kiemelt kártya */
+}
+
+#current:hover {
+    transform: scale(1.1); /* Kiemelt kártya hover állapot */
+}
+
+/*Alsó rész*/
+#fold {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 115px;
+    background-color: #32CD32;
+    z-index: -1;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5em;
+    height: 100px;
+    color: #777;
+    padding: 20px 0;
+}
+
+#quiz {
+    padding: 15px 30px;
+    margin: 20px auto;
+    color: #fff;
+    background-color: #533200;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    min-width: 30%;
+    font-size: 1.2em;
+}
+
+#quiz:hover {
+    background-color: #2b1800;
+    transform: scale(1.1);
+}
+
+#gombok{
+    text-align: center;
+}
+
+#funfact {
+    display: block;
+    padding: 10px 20px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #006ac0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#funfact:hover {
+    background-color: #004a90;
+    transform: scale(1.05);
+}
+
+#funfact:active {
+    transform: scale(1);
+}
+
+/* Kvíz */
+table{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+table td{
+        padding: 20px;
+        border: 1px solid #ddd;
+        text-align: left;
+        vertical-align: top;
+}
+
+table h2 {
+    text-align: center;
+    margin: 0;
+    padding: 10px 0;
+    font-size: 1.25em;
+}
+
+
+input[type="submit"],
+input[type="reset"] {
+    display: inline-block;
+    text-align: center;
+    padding: 10px 20px;
+    margin: 20px 10px;
+    font-size: 1em;
+    font-family: 'Space Mono', monospace;
+    color: #fff;
+    background-color: #006ac0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #01579b;
+}
+
+input[type="submit"]:active,
+input[type="reset"]:active {
+    transform: scale(0.98);
+}
+
+/* Országok */
+.elemek{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: auto;
+    flex: 1 1 90%;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+aside{
+    flex: 1 1 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+aside h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+article img, aside img {
+    max-width: 350px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* választható országok */
+.orszagok {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    padding: 10px;
+    margin: 20px auto;
+}
+
+.orszagok li {
+    flex: 1 1 100%;
+    max-width: 300px;
+    text-align: center;
+    margin: 10px;
+    background-color: #eceff1;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.orszagok a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    font-size: 1.25em;
+    transition: color 0.3s ease;
+}
+
+.orszagok li:hover {
+    background-color: #0288d1;
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+/* vissza a főmenübe */
+#vissza{
+    padding: 15px 30px;
+    margin: 20px auto;
+    font-size: 1.2em;
+    min-width: 30%;
+    color: #fff;
+    background-color: #533200;
+    text-decoration: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+#vissza:hover {
+    background-color: #2b1800;
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+#vissza:active {
+    transform: scale(1);
+}
+
+/* Reszponzivitás */
+@media only screen and (min-width: 600px) { 
+    .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    #start {
+        flex-basis: 100%;
+    }
+
+    .leiras{
+        margin: 20px;
+    }
+
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav li{
+        flex-basis: 40%;
+        margin: 10px;
+    }
+    
+    .leiras{
+        flex-basis: 80%;
+    }
+
+    .orszagok li {
+        flex-basis: 45%;
+    }
+}
+
+
+@media only screen and (min-width: 768px) {
+    #start{
+        flex-basis: 100%;
+    }
+
+    nav li{
+        flex-basis: 30%;
+    }
+
+    .orszagok{
+        flex-basis: 100%;
+    }
+
+    .orszagok li {
+        flex-basis: 23%;
+        min-width: 300px;
+    }
+
+    footer {
+        font-size: 1.25em;
+    }
+
+    .elemek{
+        align-items: stretch;   
+        gap: 20px;
+    }
+
+    aside{
+        flex-basis: 23%;
+    }
+
+    article {
+        flex-basis: 73%;
+    }
+
+    article img, aside img {
+        margin: 10px auto;
+    }
+
+    #as1{
+        order: 1;
+    }
+    #ar1 {
+        order: 2;
+    }
+    #ar2 {
+        order: 3;
+    }
+    #as2 {
+        order: 4;
+    }
+    #as3 {
+        order: 5;
+    }
+    #ar3 {
+        order: 6;
+    }
+    #ar4 {
+        order: 7;
+    }
+    #as4{
+        order: 8;
+    }
+}
